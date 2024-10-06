@@ -7,7 +7,7 @@ import (
 	"flag"
 )
 func main(){
-	lines := flag.Bool("l", false,"Count Lines")
+	lines := flag.Bool("l", false,"Count Number of Lines")
 	bytes := flag.Bool("b", false, "Count Bytes")
 	flag.Parse()
 	fmt.Println(count(os.Stdin, *lines, *bytes))
