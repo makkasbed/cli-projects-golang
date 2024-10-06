@@ -27,8 +27,10 @@ jobs:
               with:
                 name: wc-linux
                 path: ./wc/wc
+                retention-days: 2
             - name: upload-artifact
               uses: actions/upload-artifact@v4
               with:
                   name: wc-windows
                   path: ./wc/wc.exe
+                  retention-days: 2
