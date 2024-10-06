@@ -1,0 +1,36 @@
+name: Build-WC-Tool
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    test-build:
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: ./wc
+        steps:
+            - name: checkout-code
+              uses: actions/checkout@v4
+            - name: setup-golang
+              uses: actions/setup-go
+              with: 
+                 go-version: 'go1.18.2'
+            - name: test-app
+              run: go test -v
+            - name: build-for-linux
+              run: GOOS=linux go build
+            - name: build-for-windows
+              run: GOOS=windows go build
+            - uses: actions/upload-artifact@v4
+              with:
+                name: wc-linux
+                path: ./wc
+            - uses: actions/upload-artifact@v4
+              with:
+                  name: wc-windows
+                  path: ./wc.exe
+
+            
