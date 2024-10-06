@@ -2,9 +2,7 @@ name: Build-WC-Tool
 
 on:
     push:
-        branches:
-            - main
-
+        branches: ["main"]
 jobs:
     test-build:
         runs-on: ubuntu-latest
