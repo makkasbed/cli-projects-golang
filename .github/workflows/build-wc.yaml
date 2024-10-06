@@ -17,12 +17,4 @@ jobs:
               with: 
                  go-version: '1.18.2'
             - name: test-wc
-              run: go test -v
-            - name: build-for-linux
-              run: GOOS=linux go build
-            - uses: actions/upload-artifact@v4
-              with:
-                name: wc-linux
-                path: ./wc
-
-            
+              run: go test -v     
