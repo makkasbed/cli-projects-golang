@@ -20,8 +20,15 @@ jobs:
               run: go test -v
             - name: build-for-linux
               run:  GOOS=linux go build
+            - name: build-for-windows
+              run:  GOOS=windows go build
             - name: upload-artifact
               uses: actions/upload-artifact@v4
               with:
                 name: wc-linux
                 path: ./wc/wc
+            - name: upload-artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: wc-windows
+                  path: ./wc/wc.exe
