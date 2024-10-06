@@ -1,5 +1,5 @@
 # WC Tool 
-Word Count Tool written in Golang as part of reading the book (https://pragprog.com/titles/rggo/powerful-command-line-applications-in-go/) [Powerful Command-Line Applications in Go]
+Word Count Tool written in Golang as part of reading the book [Powerful Command-Line Applications in Go](https://pragprog.com/titles/rggo/powerful-command-line-applications-in-go/) 
 
 ## Build from Source
 ### Build for Windows
